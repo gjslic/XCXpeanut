@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/buyCar/buyCar",
+    "pages/sellCar/sellCar"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "花生二手车",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./pages/image/home.png",
+      "selectedIconPath": "./pages/image/home01.png"
+    },
+    {
+      "pagePath": "pages/sellCar/sellCar",
+      "text": "卖车",
+      "iconPath": "./pages/image/sellCar.png",
+      "selectedIconPath": "./pages/image/sellCar01.png"
+    }, 
+    {
+      "pagePath": "pages/personal/personal",
+      "text": "个人中心",
+      "iconPath": "./pages/image/center.png",
+      "selectedIconPath": "./pages/image/center01.png"
+    }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
