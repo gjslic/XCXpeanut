@@ -1,1 +1,261 @@
 /* pages/login/login.wxss */
+.userLogin{
+  width: 100%;
+  /* height: 42rem; */
+  /* background-color: paleturquoise; */
+}
+.hidden{
+  display: none;
+}
+.topText{
+  width: 100%;
+  color: skyblue;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.7rem;
+}
+.topImage{
+  z-index: -10;
+  width: 100%;
+  height: 10rem;
+}
+.loginBox{
+  width:100%;
+  display: flex;
+  max-width: 40rem;
+  margin: 10% auto 0 auto;
+}
+
+.firstLogin{
+  width:100%;
+  position: relative;
+}
+.loginBackImg{
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  border-radius: 0.5rem;
+  background-size:100% 100%;
+  z-index: -1;
+}
+.textBox{
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: 2rem;
+
+}
+.outerBox{
+  display:inline-block;
+  width:100%;
+  height:2rem;
+  margin:5% auto;
+}
+.inputBox{
+  width:100%;
+  height:100%;
+  border: 1px solid rgb(248, 227, 227);
+  border-radius: 0.5rem;
+  display:inline-block;
+}
+.inputLast{
+  width: 12%;
+  display: inline-block;
+  height: 80%;
+  margin-bottom: 0.2rem;
+}
+.loginInput{
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  display: inline-block;
+}
+.wechatImg{
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.blockPsw{
+  display: inline-block;
+  width: 8%;
+  height: 100%;
+}
+.selectType{
+  text-align: center;
+  margin-top: 45%;
+  height: 25%;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  color: #fff;
+}
+.modal-dialog {
+  width: 72%;
+  position: absolute;
+  top: 30%;
+  left: 14%;
+  background: #fff;
+  border-radius: 12rpx;
+}
+.modal-content{
+  text-align: center;
+}
+.modal-content .show{
+  width: 450rpx;
+  height: 323rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: -118rpx;
+  z-index: 10000;
+}
+.iconWx{
+  width:52rpx;
+  height: 41rpx;
+  background-color:white;
+  border-radius:50%;
+  /* padding-right: 20rpx; */
+}
+.iconPhone{
+  width:56rpx;
+  height: 56rpx;
+  padding-right: 15rpx;
+}
+.modal-content view:nth-of-type(2){
+  font-size: 38rpx;
+  color: #333333;
+  line-height: 1;
+}
+.modal-content view:nth-of-type(3){
+  font-size: 26rpx;
+  color: #9c9c9c;
+  margin: 18rpx 0 29rpx;
+  line-height: 1;
+}
+.modal-content button:nth-of-type(1){
+  width: 80%;
+  height: 80rpx;
+  border-radius: 60rpx;
+  margin: 0 auto 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #31cc32;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+.modal-content button:nth-of-type(1)::after{
+  border: none;
+}
+.modal-content  .wxLogin{
+  font-size: 26rpx;
+  color: #424242;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 38rpx 0 80rpx;
+}
+button::after{
+  border: none;
+}
+
+.modelBox{
+  position: absolute;
+  width: 100%;
+  height: 42rem;
+  background-color: rgb(0,0,0,0.5);
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+.modelInfo{
+  position: absolute;
+  bottom: 0;
+  z-index: 120;
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+}
+
+
+
+
+/*底部弹出框*/
+.backgroundViewStyle{
+  margin-top:30rpx;
+  background:white;
+  height:500rpx;
+  flex-direction:column;
+  border-top:1rpx solid #e5e5e5;
+}
+.demoButtonStyle{
+  background-color:#3CB371;
+  width:60%;
+  height:100rpx;
+  color:#fff;
+}
+
+.dialog_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.dialog_container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: white;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 11;
+}
+.dialog_show .dialog_container {
+  transform: translateY(0);
+}
+.dialog_show .dialog_mask {
+  display: block;
+}
+
+.dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.dialog__container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 11;
+  height:100%;
+}
+.dialog--show .dialog__container {
+  transform: translateY(0);
+}
+.dialog--show .dialog__mask {
+  display: block;
+}

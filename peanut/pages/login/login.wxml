@@ -1,2 +1,78 @@
-<!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view class="userLogin">
+  <view class="{{accBox ? 'true' : 'hidden'}}">
+    <view class="loginBox">
+      <view class="firstLogin">
+        <view class="topText">peanut登录</view>
+        <view class="outerBox">
+          <view class="inputBox">
+            <view class="inputLast">
+              <image src='../image/user.png' style='display:inline;' mode="aspectFit"></image>
+            </view>
+            <input placeholder="请输入账号" bindfocus="accFocus" value="{{userAcc}}" type="text" maxlength="11" bindinput="getUserAcc" class="loginInput"></input>
+          </view>
+        </view>
+         <view class="outerBox">
+          <view class="inputBox">
+            <view class="inputLast">
+              <image src='../image/phone.png' style='display:inline;' mode="aspectFit"></image>
+            </view>
+            <input placeholder="请输入手机号" type="text" value="{{phone}}" bindinput="getPhone" maxlength="11" class="loginInput"></input>
+          </view>
+        </view>
+        <view class="outerBox">
+          <view class="inputBox">
+            <view class="inputLast">
+              <image src='../image/password.png' style='display:inline' mode="aspectFit"></image>
+            </view>
+            <input placeholder="请输入登录密码" style="width:75%" bindinput="getUserPsw" value="{{userPsw}}" maxlength="20" password="{{pswType}}" class="loginInput"></input>
+            <view class="blockPsw">
+              <image src="../image/eyes.png" bindtap="changePsw" style='display:inline'></image>
+            </view>
+          </view>
+          <button disabled="{{btnDisabled}}" style="width:85%;border-radius:5rem;margin-top: 10%;background-color:orangered;color:white"  bindtap="login">登录</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="selectType">
+    <view style="margin-bottom: 1.5rem;">
+      <text style="text-align:center;font-size:0.8rem;color:gray">登录方式</text>
+    </view>
+    <view style="display:inline-block;margin: auto 2rem;">
+        <image src="../image/wechat.png" class="wechatImg"></image>
+      <text style="font-size:0.8rem;color:gray">\n微信登录</text>
+    </view>
+    <view style="display:inline-block;margin: auto 2rem;">
+      <image src="../image/account.png" class="wechatImg"></image>
+      <text style="font-size:0.8rem;color:gray">\n账号登录</text>
+    </view>
+    <view style="margin-top:1rem;color:gray;font-size:0.8rem">
+      <text>登录即视为已阅读已同意 </text>
+      <text style="color: orangered;">《peanut隐私政策》</text>
+    </view>
+  </view>
+  <!-- 弹出框 -->
+  <!-- <view  class="{{modelBox ? modelBox : 'hidden'}}">
+    <view class="{{modelInfo ? modelInfo : 'hidden'}}">
+      <view style="line-height: 2rem;">
+        <text>申请使用\n</text>
+        <text>你的手机号码</text>
+      </view>
+      <view style="display: inline-block;">
+        <view style="font-size:0.8rem;display:inline-block">{{phone}}</view>
+        <view style="color: gray;font-size: 0.8rem;display: inline-block;margin: 1rem;">微信绑定号码</view>
+        <view style="color:green;display: inline-block;margin-left: 8rem">√</view>
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="margin: 10% 10% 0 10%;width:30%;display:inline-block">获取手机号</button>
+      </view>
+      <view>
+        使用其他手机号码
+      </view>
+      <view style="width:100%;max-width:40rem">
+        <button type="default" bindtap="closeModel" style="margin: 10% 10% 0 5%;width:30%;display:inline-block">拒绝</button>
+        <button type="primary"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"  style="margin: 10% 10% 0 10%;width:30%;display:inline-block">允许</button>
+      </view>
+    </view>
+  </view> -->
+</view>
+
+

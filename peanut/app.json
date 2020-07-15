@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/login/login",
+    "pages/index/index",
     "pages/logs/logs",
     "pages/personal/personal",
     "pages/buyCar/buyCar",
@@ -24,8 +24,8 @@
     {
       "pagePath": "pages/sellCar/sellCar",
       "text": "卖车",
-      "iconPath": "./pages/image/sellCar.png",
-      "selectedIconPath": "./pages/image/sellCar01.png"
+      "iconPath": "./pages/image/sellcar.png",
+      "selectedIconPath": "./pages/image/sellcar01.png"
     }, 
     {
       "pagePath": "pages/personal/personal",

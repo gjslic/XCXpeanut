@@ -1,0 +1,69 @@
+<view class="userLogin">
+  <view class="{{accBox ? 'true' : 'hidden'}}">
+    <view class="loginBox">
+      <view class="firstLogin">
+      <image class="loginBackImg" mode="aspectFill" src="../image/back.jpg"></image>
+        <view class="topText">peanut登录</view>
+        <view class="outerBox">
+          <text class="textBox">账号：</text>
+          <view class="inputBox">
+            <view class="inputLast">
+              <image src='../image/user.png' style='display:inline;' mode="aspectFit"></image>
+            </view>
+            <input placeholder="请输入账号" bindfocus="accFocus" value="{{userAcc}}" type="number" bindinput="getUserAcc" class="loginInput"></input>
+          </view>
+        </view>
+         <view class="outerBox">
+          <text class="textBox">手机号：</text>
+          <view class="inputBox">
+            <view class="inputLast">
+              <image src='../image/user.png' style='display:inline;' mode="aspectFit"></image>
+            </view>
+            <input placeholder="请输入手机号" type="number" value="{{phone}}" bindinput="getPhone" class="loginInput"></input>
+          </view>
+        </view>
+        <view class="outerBox">
+          <text class="textBox">密码：</text>
+          <view class="inputBox">
+            <view class="inputLast">
+              <image src='../image/password.png' style='display:inline' mode="aspectFit"></image>
+            </view>
+            <input placeholder="请输入密码" bindinput="getUserPsw" value="{{userPsw}}" type="idcard" password class="loginInput"></input>
+          </view>
+          <view>
+            <label class="checkbox">
+              <checkbox value="cb" checked="{{checked}}" bindtap="checkBlur"/>请确认
+            </label>
+          </view>
+          <button disabled="{{btnDisabled}}" type="primary" size="mini" style="margin-left: 45%;margin-top: 10%;"  catchtap="login">登录</button>
+          <image src="../image/wechat.png" class="wechatImg" bindtap="onGotUserInfo"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <button class='phone-text' open-type="getUserInfo"  lang="zh_CN" bindgetuserinfo="onGotUserInfo">请登录</button>
+   <!--登录弹窗 -->
+  <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-content">
+      <view><image src='../image/back.png' class='show'></image></view>
+      <view>绑定手机号</view>
+      <view>请先绑定手机号在进行此操作</view>  
+      <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">
+        <image src='../image/wechat.png' class='iconWx'></image>微信用户一键绑定
+      </button>
+    </view>
+  </view>
+
+  <view style="text-align:center" class="{{loginStyle ? 'true' : 'hidden'}}">
+    <text style="text-align:center">登录方式</text>
+    <view>
+      <button type="primary" style="margin-top:2rem" bindtap="accLogin">账号密码登录</button><text>\n</text>
+      <button type="primary" style="margin-top:2rem" bindtap="onGotUserInfo">微信一键登录</button>
+      <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber" type="primary" style="margin-top:2rem">
+        <image src='../image/wechat.png' class='iconWx'></image>微信用户一键绑定
+      </button>
+    </view>
+  </view>
+</view>
